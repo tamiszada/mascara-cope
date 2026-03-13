@@ -54,7 +54,7 @@ Equipe: `);
   const fileInputRef = useRef(null);
 
   // 🛑🛑🛑 PASSO FINAL: COLOQUE A SUA CHAVE AQUI E DEPOIS FAÇA CTRL+S 🛑🛑🛑
-  const apiKey = "AIzaSyBkdBJyGLcCf2Is83FVlBRh2SmV98Y7NF8"; 
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY || ""; 
 
   const processFile = (file) => {
     if (!file || !file.type.startsWith('image/')) return;
